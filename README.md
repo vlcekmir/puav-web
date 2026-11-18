@@ -63,7 +63,7 @@ Aby doména puav.cz ukazovala na web, je potřeba v DNS:
    | AAAA | 2606:50c0:8002::153 |
    | AAAA | 2606:50c0:8003::153 |
 
-3. Pro **www.puav.cz** nastavit `CNAME` na `<ÚČET>.github.io` (doplní se po založení repozitáře).
+3. Pro **www.puav.cz** nastavit `CNAME` na `vlcekmir.github.io`.
 4. **MX a další záznamy pro e-mail (@puav.cz) nechat beze změny.** Mění se jen A/AAAA a www.
 5. Doporučeno: ověřit doménu v nastavení GitHub účtu (*Settings → Pages → Add a domain*). GitHub k tomu vygeneruje jeden TXT záznam.
    Ověření chrání doménu proti zneužití.
