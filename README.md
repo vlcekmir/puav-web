@@ -13,6 +13,7 @@ docs/                               ← samotný web (to se publikuje)
   kratkodobe-pripojeni-k-siti/      Návod: Krátkodobé připojení k elektrické síti
   storytelling/                     Storytelling
   o-platforme/                      O Platformě
+  en/, en/principles/, en/about/    anglická verze (zkrácená: úvod, Principy, O Platformě)
   404.html                          stránka „nenalezeno“
   ke-stazeni/                       PDF ke stažení
   assets/img/                       obrázky a loga

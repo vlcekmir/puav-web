@@ -5,6 +5,16 @@
   'use strict';
 
   var MAIL = 'vlcek@puav.cz';
+  var EN = document.documentElement.lang === 'en';
+  var TXT = EN ? {
+    menu: 'Menu', close: 'Close', copy: 'Copy e-mail', copied: 'Copied',
+    name: 'Name', email: 'E-mail', org: 'Organisation', topic: 'Topic',
+    sent: 'We have opened your e-mail client with a pre-filled message to vlcek@puav.cz — just send it. If nothing opened, please write to us directly.'
+  } : {
+    menu: 'Menu', close: 'Zavřít', copy: 'Kopírovat e-mail', copied: 'Zkopírováno',
+    name: 'Jméno', email: 'E-mail', org: 'Organizace', topic: 'Téma',
+    sent: 'Otevřeli jsme váš e-mailový klient s\u00a0předplněnou zprávou pro vlcek@puav.cz — stačí ji odeslat. Pokud se nic neotevřelo, napište nám prosím přímo.'
+  };
 
   /* ---------- 0) Mobilní menu ---------- */
   var header = document.querySelector('.site-header');
@@ -14,7 +24,7 @@
     var setMenu = function (open) {
       header.classList.toggle('menu-open', open);
       menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
-      if (menuLabel) menuLabel.textContent = open ? 'Zavřít' : 'Menu';
+      if (menuLabel) menuLabel.textContent = open ? TXT.close : TXT.menu;
     };
     menuBtn.addEventListener('click', function () { setMenu(!header.classList.contains('menu-open')); });
     // po kliknutí na odkaz (např. „Zapojte se“ na stejné stránce) menu zavřít
@@ -71,9 +81,9 @@
   var copyTimer = null;
   function copyMail() {
     if (navigator.clipboard) navigator.clipboard.writeText(MAIL).catch(function () {});
-    setCopyLabel('Zkopírováno');
+    setCopyLabel(TXT.copied);
     clearTimeout(copyTimer);
-    copyTimer = setTimeout(function () { setCopyLabel('Kopírovat e-mail'); }, 1800);
+    copyTimer = setTimeout(function () { setCopyLabel(TXT.copy); }, 1800);
   }
   function setCopyLabel(text) {
     var labels = document.querySelectorAll('[data-copy-label]');
@@ -114,18 +124,17 @@
     e.preventDefault();
     var f = form.elements;
     var body = [
-      'Jméno: ' + f.name.value,
-      'E-mail: ' + f.email.value,
-      'Organizace: ' + (f.org.value || '—'),
-      'Téma: ' + f.topic.value,
+      TXT.name + ': ' + f.name.value,
+      TXT.email + ': ' + f.email.value,
+      TXT.org + ': ' + (f.org.value || '—'),
+      TXT.topic + ': ' + f.topic.value,
       '',
       f.msg.value
     ].join('\n');
     window.location.href = 'mailto:' + MAIL +
       '?subject=' + encodeURIComponent('PUAV — ' + f.topic.value) +
       '&body=' + encodeURIComponent(body);
-    dlg.querySelector('[data-sent-text]').textContent =
-      'Otevřeli jsme váš e-mailový klient s' + NBSP + 'předplněnou zprávou pro vlcek@puav.cz — stačí ji odeslat. Pokud se nic neotevřelo, napište nám prosím přímo.';
+    dlg.querySelector('[data-sent-text]').textContent = TXT.sent;
     stateForm.hidden = true;
     stateSent.hidden = false;
   });
