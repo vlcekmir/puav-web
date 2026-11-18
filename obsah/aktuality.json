@@ -91,12 +91,6 @@
       "odkaz": {
         "text": "Více ↗",
         "url": "https://osha.europa.eu/en/oshnews/workshop-osh-and-risk-assessment-audiovisual-production-oira"
-      },
-      "obrazek": {
-        "soubor": "aktualita-clermont-ferrand.jpg",
-        "popis": "Kamera s monitorem při natáčení",
-        "styl": "foto",
-        "pozice": "65% 50%"
       }
     },
     {
@@ -124,20 +118,26 @@
       },
       "obrazek": {
         "soubor": "aktualita-lfs-2025.jpg",
-        "popis": "Panelová debata o udržitelnosti na Letní filmové škole 2025",
+        "popis": "Účastníci debaty o udržitelnosti na Letní filmové škole 2025",
         "styl": "foto",
-        "pozice": "50% 50%"
+        "pozice": "60% 40%"
       }
     },
     {
       "datum": "2025-07-06",
       "datum_text": "6. července 2025",
       "stitek": "Přednáška",
-      "nadpis": "PUAV v Industry programu KVIFF",
+      "nadpis": "PUAV v industry programu KVIFF",
       "text": "V rámci Industry Days 59. MFF Karlovy Vary jsme představili novou alianci a Principy udržitelného natáčení s praktickými doporučeními pro produkce.",
       "odkaz": {
         "text": "Záznam ↗",
         "url": "https://www.youtube.com/watch?v=Rqnirhh5DX8"
+      },
+      "obrazek": {
+        "soubor": "aktualita-kviff-2025.jpg",
+        "popis": "Vystoupení PUAV v industry programu MFF Karlovy Vary",
+        "styl": "foto",
+        "pozice": "50% 30%"
       }
     }
   ]
