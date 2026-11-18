@@ -1,0 +1,56 @@
+<dialog id="kontakt-dialog" class="contact-dialog" aria-labelledby="kontakt-dialog-title">
+  <div style="padding: 34px 32px;">
+    <div data-state="form">
+      <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 16px;">
+        <div>
+          <span style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #767676; margin-bottom: 8px;">Kontaktní formulář</span>
+          <h2 id="kontakt-dialog-title" style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em;">Napište nám</h2>
+        </div>
+        <button type="button" data-close aria-label="Zavřít" class="hv-text-black" style="font-family: inherit; font-size: 18px; line-height: 1; color: #767676; background: none; border: none; padding: 4px; cursor: pointer;">✕</button>
+      </div>
+      <form id="kontakt-form" style="display: grid; gap: 16px; margin-top: 24px;">
+        <label style="display: grid; gap: 7px;">
+          <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #767676;">Téma</span>
+          <select name="topic" style="font-family: inherit; font-size: 14px; padding: 11px 12px; border: 1px solid #dedcda; background: #ffffff; color: #111111; width: 100%;">
+            <option value="Členství v PUAV">Členství v PUAV</option>
+            <option value="Konzultace, přednáška nebo školení">Konzultace, přednáška nebo školení</option>
+            <option value="Poradit s konkrétním natáčením">Poradit s konkrétním natáčením</option>
+            <option value="Něco jiného">Něco jiného</option>
+          </select>
+        </label>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+          <label style="display: grid; gap: 7px;">
+            <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #767676;">Jméno a příjmení</span>
+            <input type="text" name="name" required autocomplete="name" placeholder="Jana Nováková" class="fx-field" style="font-family: inherit; font-size: 14px; padding: 11px 12px; border: 1px solid #dedcda; background: #ffffff; color: #111111; width: 100%;">
+          </label>
+          <label style="display: grid; gap: 7px;">
+            <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #767676;">E-mail</span>
+            <input type="email" name="email" required autocomplete="email" placeholder="jana@studio.cz" class="fx-field" style="font-family: inherit; font-size: 14px; padding: 11px 12px; border: 1px solid #dedcda; background: #ffffff; color: #111111; width: 100%;">
+          </label>
+        </div>
+        <label style="display: grid; gap: 7px;">
+          <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #767676;">Organizace nebo projekt</span>
+          <input type="text" name="org" autocomplete="organization" placeholder="Nepovinné" class="fx-field" style="font-family: inherit; font-size: 14px; padding: 11px 12px; border: 1px solid #dedcda; background: #ffffff; color: #111111; width: 100%;">
+        </label>
+        <label style="display: grid; gap: 7px;">
+          <span style="font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #767676;">Zpráva</span>
+          <textarea name="msg" rows="4" placeholder="Co potřebujete? Kdy a kde?" class="fx-field" style="font-family: inherit; font-size: 14px; line-height: 1.6; padding: 11px 12px; border: 1px solid #dedcda; background: #ffffff; color: #111111; width: 100%; resize: vertical;"></textarea>
+        </label>
+        <div style="display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 4px;">
+          <button type="submit" class="hv-invert" style="font-family: inherit; font-size: 14px; font-weight: 700; color: #111111; background: #fbaa1a; border: none; padding: 15px 26px; cursor: pointer;">Odeslat</button>
+          <span style="font-size: 12px; line-height: 1.6; color: #767676;">Formulář odejde jako e-mail na vlcek@puav.cz.</span>
+        </div>
+      </form>
+    </div>
+    <div data-state="sent" hidden>
+      <span style="display: block; font-size: 10px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #767676; margin-bottom: 8px;">Kontaktní formulář</span>
+      <h2 style="font-size: 22px; font-weight: 800; letter-spacing: -0.01em;">Děkujeme</h2>
+      <div style="width: 44px; height: 5px; background: #fbaa1a; margin: 18px 0 18px;"></div>
+      <p data-sent-text style="font-size: 14px; line-height: 1.7; color: #3f3f3f;"></p>
+      <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 24px;">
+        <button type="button" data-close class="hv-bg-dark" style="font-family: inherit; font-size: 14px; font-weight: 700; color: #ffffff; background: #111111; border: none; padding: 14px 22px; cursor: pointer;">Zavřít</button>
+        <button type="button" data-copy-mail class="hv-bg-yellow" style="font-family: inherit; font-size: 14px; font-weight: 700; color: #111111; background: none; border: 1px solid #111111; padding: 14px 22px; cursor: pointer;"><span data-copy-label>Kopírovat e-mail</span></button>
+      </div>
+    </div>
+  </div>
+</dialog>
