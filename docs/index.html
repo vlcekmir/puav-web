@@ -2,6 +2,7 @@
 <html lang="cs">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>PUAV – Platforma udržitelné audiovize</title>
 <meta name="description" content="PUAV: Platforma udržitelné audiovize. Know-how, Principy udržitelného natáčení a praktické nástroje pro českou audiovizi.">
@@ -32,7 +33,8 @@
     <a href="./" style="display: flex; align-items: center; text-decoration: none; padding-right: 10px;">
       <img width="360" height="127" src="assets/img/puav-logo.png" alt="PUAV: Platforma udržitelné audiovize" style="height: 38px; width: auto; display: block;">
     </a>
-    <nav aria-label="Hlavní navigace" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="hlavni-navigace"><span class="menu-toggle-icon" aria-hidden="true"></span><span class="menu-toggle-label">Menu</span></button>
+    <nav id="hlavni-navigace" aria-label="Hlavní navigace" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
       <a aria-current="page" href="./" style="font-size: 14px; font-weight: 700; text-decoration: none; color: rgb(17, 17, 17); border-bottom: 2px solid rgb(251, 170, 26); padding-bottom: 3px;">Domů</a>
       <a href="jak-natacet-udrzitelne/" style="font-size: 14px; text-decoration: none; color: rgb(63, 63, 63);">Jak natáčet udržitelně</a>
       <a href="proc-natacet-udrzitelne/" style="font-size: 14px; text-decoration: none; color: rgb(63, 63, 63);">Proč natáčet udržitelně</a>
@@ -109,6 +111,17 @@
           </div>
         </article>
         <article style="background: rgb(255, 255, 255); display: grid; grid-template-columns: 110px 1fr; gap: 0px; align-items: stretch;" class="r14">
+          <div style="background: rgb(237, 236, 237); border-right: 1px solid rgb(222, 220, 218); position: relative; overflow: hidden; min-height: 72px;"><img src="assets/img/aktualita-lfs-2026.jpg" width="720" height="541" loading="lazy" decoding="async" alt="Účastníci panelu Udržitelné natáčení od scénáře po distribuci na Letní filmové škole" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 40%;"></div>
+          <div style="padding: 16px 18px;">
+            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
+              <time datetime="2026-07-26" style="font-size: 14px; font-weight: 700; color: rgb(17, 17, 17);">26. července 2026</time>
+              <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: rgb(251, 170, 26); color: rgb(17, 17, 17); padding: 3px 8px;">Diskuse</span>
+            </div>
+            <h3 style="font-size: 18px; font-weight: 700; line-height: 1.35; margin-bottom: 8px;">Udržitelné natáčení od scénáře po distribuci</h3>
+            <p style="font-size: 16px; line-height: 1.65; color: rgb(63, 63, 63);">Na 52. Letní filmové škole v&nbsp;Uherském Hradišti jsme uspořádali panel o&nbsp;tom, jak snižovat environmentální dopad audiovizuální výroby od psaní scénáře až po distribuci. Diskutovali Hana de Goeij (TV Nova), Kateřina Kovářová (ČT), Vít Schmarc (FAMU), Jan Hubáček (Gnomon Production) a&nbsp;scenárista Josef Kokta, moderoval Miroslav Vlček. <a href="https://youtu.be/MlWrlD6T4PE" target="_blank" rel="noopener" style="font-weight: 700;">Záznam ↗</a></p>
+          </div>
+        </article>
+        <article style="background: rgb(255, 255, 255); display: grid; grid-template-columns: 110px 1fr; gap: 0px; align-items: stretch;" class="r14">
           <div style="background: rgb(225, 34, 49); border-right: 1px solid rgb(222, 220, 218); display: flex; align-items: center; justify-content: center; padding: 8px; min-height: 72px;"><img src="assets/img/aktualita-famu.png" width="152" height="64" loading="lazy" decoding="async" alt="FAMU" style="width: 100%; max-width: 110px; height: auto; display: block;"></div>
           <div style="padding: 16px 18px;">
             <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
@@ -117,17 +130,6 @@
             </div>
             <h3 style="font-size: 18px; font-weight: 700; line-height: 1.35; margin-bottom: 8px;">FAMU otevírá kurzy udržitelnosti v&nbsp;audiovizi</h3>
             <p style="font-size: 16px; line-height: 1.65; color: rgb(63, 63, 63);">Bezplatné kurzy zaměřené na filmovou produkci, data a&nbsp;reporting i&nbsp;environmentální komunikaci. Účastníci získají mezinárodně uznávaný mikrocertifikát. <a href="https://www.famu.cz/cs/fakulta/environmentalni-agenda/udrzitelnost-v-audiovizi-nove-kurzy-czv-s-mikrocertifikaty/" target="_blank" rel="noopener" style="font-weight: 700;">Více ↗</a></p>
-          </div>
-        </article>
-        <article style="background: rgb(255, 255, 255); display: grid; grid-template-columns: 110px 1fr; gap: 0px; align-items: stretch;" class="r14">
-          <div style="background: rgb(237, 236, 237); border-right: 1px solid rgb(222, 220, 218); display: flex; align-items: center; justify-content: center; padding: 12px 14px; min-height: 72px;"><img src="assets/img/aktualita-principy-obalka.jpg" width="300" height="424" loading="lazy" decoding="async" alt="Titulní strana Principů udržitelného natáčení" style="width: 100%; max-width: 82px; height: auto; display: block; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);"></div>
-          <div style="padding: 16px 18px;">
-            <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
-              <time datetime="2026-03-20" style="font-size: 14px; font-weight: 700; color: rgb(17, 17, 17);">20. března 2026</time>
-              <span style="font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; background: rgb(251, 170, 26); color: rgb(17, 17, 17); padding: 3px 8px;">Principy</span>
-            </div>
-            <h3 style="font-size: 18px; font-weight: 700; line-height: 1.35; margin-bottom: 8px;">Jednotný reporting Principů zaveden napříč členy</h3>
-            <p style="font-size: 16px; line-height: 1.65; color: rgb(63, 63, 63);">Televizní i&nbsp;nezávislé produkce nyní vykazují plnění Principů podle jedné metodiky a&nbsp;společné struktury závěrečné zprávy.</p>
           </div>
         </article>
         <!-- AKTUALITY:END -->

@@ -47,6 +47,98 @@
         "popis": "Titulní strana Principů udržitelného natáčení",
         "styl": "dokument"
       }
+    },
+    {
+      "datum": "2026-07-26",
+      "datum_text": "26. července 2026",
+      "stitek": "Diskuse",
+      "nadpis": "Udržitelné natáčení od scénáře po distribuci",
+      "text": "Na 52. Letní filmové škole v Uherském Hradišti jsme uspořádali panel o tom, jak snižovat environmentální dopad audiovizuální výroby od psaní scénáře až po distribuci. Diskutovali Hana de Goeij (TV Nova), Kateřina Kovářová (ČT), Vít Schmarc (FAMU), Jan Hubáček (Gnomon Production) a scenárista Josef Kokta, moderoval Miroslav Vlček.",
+      "odkaz": {
+        "text": "Záznam ↗",
+        "url": "https://youtu.be/MlWrlD6T4PE"
+      },
+      "obrazek": {
+        "soubor": "aktualita-lfs-2026.jpg",
+        "popis": "Účastníci panelu Udržitelné natáčení od scénáře po distribuci na Letní filmové škole",
+        "styl": "foto",
+        "pozice": "45% 40%"
+      }
+    },
+    {
+      "datum": "2026-06-01",
+      "datum_text": "1. června 2026",
+      "stitek": "Přednáška",
+      "nadpis": "Udržitelnější filmová výroba je možná",
+      "text": "V České televizi jsme producentům představili Principy udržitelného natáčení včetně jejich praktických limitů a možných řešení. Záznam přednášky shrnuje současný stav udržitelného natáčení v ČR a je volně dostupný na YouTube kanálu PUAV.",
+      "odkaz": {
+        "text": "Záznam ↗",
+        "url": "https://youtu.be/APJ47hwa9_w"
+      },
+      "obrazek": {
+        "soubor": "aktualita-ct-prednaska.jpg",
+        "popis": "Záběr ze záznamu přednášky PUAV v České televizi",
+        "styl": "foto",
+        "pozice": "83% 50%"
+      }
+    },
+    {
+      "datum": "2026-02-04",
+      "datum_text": "4.–5. února 2026",
+      "stitek": "Mezinárodní",
+      "nadpis": "Evropský workshop o hodnocení rizik v audiovizuální výrobě",
+      "text": "Na 48. ročníku festivalu krátkých filmů v Clermont-Ferrand se PUAV zapojil do workshopu pro producenty o fyzické a psychosociální bezpečnosti při natáčení. Workshop pořádali evropští sociální partneři audiovize.",
+      "odkaz": {
+        "text": "Více ↗",
+        "url": "https://osha.europa.eu/en/oshnews/workshop-osh-and-risk-assessment-audiovisual-production-oira"
+      },
+      "obrazek": {
+        "soubor": "aktualita-clermont-ferrand.jpg",
+        "popis": "Kamera s monitorem při natáčení",
+        "styl": "foto",
+        "pozice": "65% 50%"
+      }
+    },
+    {
+      "datum": "2025-09-27",
+      "datum_text": "27. září 2025",
+      "stitek": "Workshop",
+      "nadpis": "Udržitelnost v industry programu Finále Plzeň",
+      "text": "V industry sekci festivalu Finále Plzeň jsme spolu se Zsófií Szemerédy z Leverage Point Entertainment vedli workshop o udržitelnosti ve vývoji a výrobě audiovizuálních projektů. Připravili jsme ho ve spolupráci s MIDPOINT Institute.",
+      "obrazek": {
+        "soubor": "aktualita-finale-plzen.jpg",
+        "popis": "Workshop o udržitelnosti v industry programu Finále Plzeň",
+        "styl": "foto",
+        "pozice": "48% 40%"
+      }
+    },
+    {
+      "datum": "2025-07-27",
+      "datum_text": "27. července 2025",
+      "stitek": "Diskuse",
+      "nadpis": "Udržitelnost jako cesta",
+      "text": "V programu Nová realita na 51. Letní filmové škole v Uherském Hradišti jsme představili Platformu udržitelné audiovize v debatě o udržitelnosti, kterou moderovala Simona Babčáková.",
+      "odkaz": {
+        "text": "Záznam ↗",
+        "url": "https://www.youtube.com/watch?v=g2EgmHUZMzE"
+      },
+      "obrazek": {
+        "soubor": "aktualita-lfs-2025.jpg",
+        "popis": "Panelová debata o udržitelnosti na Letní filmové škole 2025",
+        "styl": "foto",
+        "pozice": "50% 50%"
+      }
+    },
+    {
+      "datum": "2025-07-06",
+      "datum_text": "6. července 2025",
+      "stitek": "Přednáška",
+      "nadpis": "PUAV v Industry programu KVIFF",
+      "text": "V rámci Industry Days 59. MFF Karlovy Vary jsme představili novou alianci a Principy udržitelného natáčení s praktickými doporučeními pro produkce.",
+      "odkaz": {
+        "text": "Záznam ↗",
+        "url": "https://www.youtube.com/watch?v=Rqnirhh5DX8"
+      }
     }
   ]
 }

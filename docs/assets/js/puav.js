@@ -1,10 +1,28 @@
 /* PUAV – interaktivní prvky webu (čistý JavaScript, bez knihoven).
    Web funguje i bez JavaScriptu; skript jen přidává:
-   1) filtr Principů, 2) rozbalení odborného komentáře, 3) kontaktní formulář, 4) kopírování e-mailu. */
+   0) mobilní menu, 1) filtr Principů, 2) rozbalení odborného komentáře, 3) kontaktní formulář, 4) kopírování e-mailu. */
 (function () {
   'use strict';
 
   var MAIL = 'vlcek@puav.cz';
+
+  /* ---------- 0) Mobilní menu ---------- */
+  var header = document.querySelector('.site-header');
+  var menuBtn = document.querySelector('.menu-toggle');
+  if (header && menuBtn) {
+    var menuLabel = menuBtn.querySelector('.menu-toggle-label');
+    var setMenu = function (open) {
+      header.classList.toggle('menu-open', open);
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      if (menuLabel) menuLabel.textContent = open ? 'Zavřít' : 'Menu';
+    };
+    menuBtn.addEventListener('click', function () { setMenu(!header.classList.contains('menu-open')); });
+    // po kliknutí na odkaz (např. „Zapojte se“ na stejné stránce) menu zavřít
+    header.querySelectorAll('nav a').forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && header.classList.contains('menu-open')) { setMenu(false); menuBtn.focus(); }
+    });
+  }
   var NBSP = ' ';
 
   /* ---------- 1) Principy: „Jen 13 základních“ / „Všech 22 bodů“ ---------- */

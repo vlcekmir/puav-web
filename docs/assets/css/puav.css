@@ -221,9 +221,30 @@ html { scroll-behavior: smooth; }
 /* ---------- Rozvržení stránky a hlavička ---------- */
 /* overflow-x: clip (na rozdíl od hidden) nebrání „přichycení“ hlavičky; starší prohlížeče použijí hidden */
 .page { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
-/* Hlavička zůstává nahoře jen na širších obrazovkách, kde má jeden řádek (~67 px). Na mobilu by zabrala čtvrtinu displeje. */
-@media (max-width: 959px) { .site-header { position: static !important; } }
-@media (min-width: 960px) { [id] { scroll-margin-top: 84px; } }
+/* Hlavička zůstává nahoře (~67 px). Bez JavaScriptu se na užších obrazovkách navigace nesbalí do menu,
+   hlavička je pak vyšší, a proto se tam neposouvá s obsahem. */
+[id] { scroll-margin-top: 84px; }
+@media (max-width: 959px) { html:not(.js) .site-header { position: static !important; } }
+
+/* ---------- Mobilní menu (pod 960 px) ---------- */
+.menu-toggle { display: none; }
+@media (max-width: 959px) {
+  .js .menu-toggle { display: inline-flex; align-items: center; gap: 10px; font-family: inherit; font-size: 14px; font-weight: 700; color: #111111; background: #ffffff; border: 1px solid #111111; padding: 9px 14px; cursor: pointer; }
+  .js .menu-toggle:hover { background: #fbaa1a; border-color: #fbaa1a; }
+  .menu-toggle-icon, .menu-toggle-icon::before, .menu-toggle-icon::after { display: block; width: 16px; height: 2px; background: currentColor; transition: transform 0.2s; }
+  .menu-toggle-icon { position: relative; }
+  .menu-toggle-icon::before, .menu-toggle-icon::after { content: ""; position: absolute; left: 0; }
+  .menu-toggle-icon::before { top: -5px; }
+  .menu-toggle-icon::after { top: 5px; }
+  .menu-open .menu-toggle-icon { background: transparent; }
+  .menu-open .menu-toggle-icon::before { transform: translateY(5px) rotate(45deg); }
+  .menu-open .menu-toggle-icon::after { transform: translateY(-5px) rotate(-45deg); }
+  .js .site-header nav { display: none !important; }
+  .js .site-header.menu-open nav { display: flex !important; flex-direction: column; align-items: stretch !important; gap: 0 !important; width: 100%; padding-bottom: 6px; }
+  .js .site-header.menu-open nav a { font-size: 16px !important; padding: 13px 0 !important; border-bottom: 1px solid #edeced !important; }
+  .js .site-header.menu-open nav a[aria-current="page"] { box-shadow: inset 4px 0 0 #fbaa1a; padding-left: 14px !important; }
+  .js .site-header.menu-open nav a:last-child { margin-top: 14px; padding: 13px 16px !important; border-bottom: none !important; text-align: center; }
+}
 
 /* ---------- Odkaz „Přeskočit na hlavní obsah“ ---------- */
 .skip-link { position: absolute; left: -9999px; top: 0; background: #fbaa1a; color: #111111; padding: 10px 16px; font-weight: 700; z-index: 9999; }

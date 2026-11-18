@@ -2,6 +2,7 @@
 <html lang="cs">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stránka nenalezena | PUAV</title>
 <meta name="robots" content="noindex">
@@ -10,6 +11,7 @@
 <link rel="preload" href="/assets/fonts/open-sans-normal-latin-ext.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/assets/fonts/open-sans-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/puav.css">
+<script src="/assets/js/puav.js" defer></script>
 </head>
 <body>
 <div class="page">
@@ -18,7 +20,8 @@
     <a href="/" style="display: flex; align-items: center; text-decoration: none; padding-right: 10px;">
       <img width="360" height="127" src="/assets/img/puav-logo.png" alt="PUAV: Platforma udržitelné audiovize" style="height: 38px; width: auto; display: block;">
     </a>
-    <nav aria-label="Hlavní navigace" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="hlavni-navigace"><span class="menu-toggle-icon" aria-hidden="true"></span><span class="menu-toggle-label">Menu</span></button>
+    <nav id="hlavni-navigace" aria-label="Hlavní navigace" style="display: flex; align-items: center; gap: 26px; flex-wrap: wrap;">
       <a href="/" style="font-size: 14px; font-weight: 700; text-decoration: none; color: rgb(17, 17, 17); border-bottom: 2px solid rgb(251, 170, 26); padding-bottom: 3px;">Domů</a>
       <a href="/jak-natacet-udrzitelne/" style="font-size: 14px; text-decoration: none; color: rgb(63, 63, 63);">Jak natáčet udržitelně</a>
       <a href="/proc-natacet-udrzitelne/" style="font-size: 14px; text-decoration: none; color: rgb(63, 63, 63);">Proč natáčet udržitelně</a>
