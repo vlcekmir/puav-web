@@ -4,6 +4,7 @@
 - **Texty na webu neměň**, pokud o to uživatel výslovně nepožádá. Při převzetí textu od uživatele ho použij doslova. Pravopisné připomínky jen navrhni.
 - Typografie: za jednopísmennými předložkami a spojkami (a, i, k, o, s, u, v, z, velká i malá) patří `&nbsp;` místo mezery.
 - Hlavička (včetně tlačítka mobilního menu), kontaktní sekce (`#kontakt`) a patička jsou zkopírované v každé ze 7 stránek, hlavička a patička i v `404.html`. Změnu proveď všude.
+- Po změně `docs/assets/css/puav.css` nebo `docs/assets/js/puav.js` spusť `python3 nastroje/verze_assetu.py` (otisk verze v odkazech, aby prohlížeče nepoužily staré styly).
 - **Aktuality** se upravují jen v `obsah/aktuality.json`, potom spusť `python3 nastroje/aktuality.py`. HTML mezi `<!-- AKTUALITY:START/END -->` needituj.
 - Odkazy uvnitř webu jsou relativní (`../o-platforme/`), aby web fungoval i na zkušební adrese vlcekmir.github.io/puav-web/. Výjimka: `404.html` používá adresy od kořene (`/…`).
 - Nové obrázky zmenši (nejvýš 2× zobrazená velikost, JPEG kvalita ~80) a dej jim `width`/`height` a u obrázků pod první obrazovkou `loading="lazy"`.
