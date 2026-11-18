@@ -33,7 +33,7 @@ PAGES = [
      'Data o dopadu audiovizuální výroby, odpovědi na nejčastější námitky z praxe a to, co s tématem umí udělat samotný obsah.'),
     ('drevo', 'druhy-zivot-filmoveho-dreva/', 'PUAV%20N%C3%A1vod%20D%C5%99evo.dc.html',
      'Druhý život filmového dřeva - návod na recyklaci kulis | PUAV',
-     'Když kulisy dosslouží, jejich příběh nemusí skončit na skládce. Návod od kontroly materiálu po potvrzení využitelné v závěrečné zprávě.'),
+     'Když kulisy doslouží, jejich příběh nemusí skončit na skládce. Návod od kontroly materiálu po potvrzení využitelné v závěrečné zprávě.'),
     ('pripojky', 'kratkodobe-pripojeni-k-siti/', 'PUAV%20N%C3%A1vod%20P%C5%99%C3%ADpojky.dc.html',
      'Krátkodobé připojení k elektrické síti - návod pro filmaře | PUAV',
      'Průvodce pro filmaře: jak se na lokaci připojit do sítě místo agregátu. Postup, ceny a lhůty u PRE, ČEZ i EG.D.'),

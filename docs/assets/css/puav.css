@@ -218,6 +218,13 @@ html { scroll-behavior: smooth; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 [id] { scroll-margin-top: 16px; }
 
+/* ---------- Rozvržení stránky a hlavička ---------- */
+/* overflow-x: clip (na rozdíl od hidden) nebrání „přichycení“ hlavičky; starší prohlížeče použijí hidden */
+.page { max-width: 100%; overflow-x: hidden; overflow-x: clip; }
+/* Hlavička zůstává nahoře jen na širších obrazovkách, kde má jeden řádek (~67 px). Na mobilu by zabrala čtvrtinu displeje. */
+@media (max-width: 959px) { .site-header { position: static !important; } }
+@media (min-width: 960px) { [id] { scroll-margin-top: 84px; } }
+
 /* ---------- Odkaz „Přeskočit na hlavní obsah“ ---------- */
 .skip-link { position: absolute; left: -9999px; top: 0; background: #fbaa1a; color: #111111; padding: 10px 16px; font-weight: 700; z-index: 9999; }
 .skip-link:focus { left: 0; }

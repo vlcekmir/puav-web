@@ -31,6 +31,7 @@
   if (bZ && bV) {
     bZ.addEventListener('click', function () { filterPrincipy('zakladni'); });
     bV.addEventListener('click', function () { filterPrincipy('vse'); });
+    filterPrincipy('zakladni');  // výchozí stav: jen 13 základních bodů (bez JavaScriptu se zobrazí všech 22)
   }
 
   /* ---------- 2) Odborný komentář ---------- */
