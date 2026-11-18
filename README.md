@@ -75,8 +75,6 @@ Dokumentace: [Managing a custom domain for your GitHub Pages site](https://docs.
 
 ## Otevřené body v obsahu
 
-- Galerie „Takhle to vypadá na place“ (Domů): 6 míst pro fotky je prázdných, fotky nebyly v exportu. Místa jsou v kódu označená komentářem `<!-- FOTO … -->`.
-- Aktuality (Domů): 3× zástupné pole „Foto“.
-- Odkaz „Vyplnit Závěrečnou zprávu ↗“ (Jak natáčet udržitelně) vede na `ODKAZ-NA-GOOGLE-FORM`.
-- Ikony LinkedIn, Facebook a Instagram vedou na `#`.
+- Galerie „Takhle to vypadá na place“ (Domů) je dočasně skrytá (atribut `hidden` u `<section id="galerie">`). Šest míst pro fotky je v kódu označeno komentářem `<!-- FOTO … -->`.
+- Odkaz „Vyplnit Závěrečnou zprávu ↗“ (Jak natáčet udržitelně) vede na `ODKAZ-NA-GOOGLE-FORM`. Chybí adresa Google formuláře.
 - Kontaktní formulář otevírá e-mailového klienta (mailto). Odesílání bez e-mailového klienta by vyžadovalo formulářovou službu.
