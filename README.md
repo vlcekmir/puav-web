@@ -64,7 +64,7 @@ Jedna aktualita:
 - `datum` (RRRR-MM-DD) určuje pořadí; `datum_text` je to, co se zobrazí (může být i rozsah „23.–28. září 2026“).
 - `odkaz` je nepovinný. Odkaz v rámci webu se píše od lomítka, např. `/jak-natacet-udrzitelne/#principy`.
 - `obrazek` je nepovinný (bez něj se ukáže logo PUAV). Soubor patří do `docs/assets/img/`. Styly:
-  `foto` (vyplní celý čtverec; `pozice` = výřez, např. `"50% 40%"`), `logo` (na barevném pozadí `pozadi`), `dokument` (náhled stránky se stínem).
+  `foto` (vyplní okénko 3 : 2, na mobilu 16 : 9; `pozice` = výřez, např. `"50% 25%"` posune výřez nahoru), `logo` (na barevném pozadí `pozadi`), `dokument` (náhled stránky se stínem).
 
 **Pravidla, aby web zůstal v pořádku:**
 - Nové obrázky zmenšete na nejvýš dvojnásobek velikosti, ve které se zobrazují (fotky do ~300 kB, JPEG).

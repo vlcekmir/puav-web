@@ -81,18 +81,19 @@ def thumb(o, pre):
     img = f'<img src="{src}" width="{w}" height="{h}" loading="lazy" decoding="async" alt="{alt}" '
     style = o.get('styl', 'foto')
     if style == 'foto':
-        return ('<div style="background: rgb(237, 236, 237); border-right: 1px solid rgb(222, 220, 218); position: relative; overflow: hidden; min-height: 72px;">'
+        return ('<div class="news-thumb" style="background: rgb(237, 236, 237); position: relative; overflow: hidden;">'
                 + img + f'style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: {o.get("pozice", "50% 50%")};"></div>')
     if style == 'logo':
-        return (f'<div style="background: {o.get("pozadi", "rgb(255, 255, 255)")}; border-right: 1px solid rgb(222, 220, 218); display: flex; align-items: center; justify-content: center; padding: 8px; min-height: 72px;">'
-                + img + 'style="width: 100%; max-width: 110px; height: auto; display: block;"></div>')
+        return (f'<div class="news-thumb" style="background: {o.get("pozadi", "rgb(255, 255, 255)")}; display: flex; align-items: center; justify-content: center; padding: 12px;'
+                + (' box-shadow: inset 0 0 0 1px rgb(222, 220, 218);' if o.get('pozadi', 'rgb(255, 255, 255)') == 'rgb(255, 255, 255)' else '') + '">'
+                + img + 'style="width: 70%; max-width: 140px; height: auto; display: block;"></div>')
     if style == 'dokument':
-        return ('<div style="background: rgb(237, 236, 237); border-right: 1px solid rgb(222, 220, 218); display: flex; align-items: center; justify-content: center; padding: 12px 14px; min-height: 72px;">'
-                + img + 'style="width: 100%; max-width: 82px; height: auto; display: block; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);"></div>')
+        return ('<div class="news-thumb" style="background: rgb(237, 236, 237); display: flex; align-items: center; justify-content: center; padding: 10px;">'
+                + img + 'style="height: 100%; width: auto; max-width: 100%; object-fit: contain; display: block; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);"></div>')
     sys.exit(f'Neznámý styl obrázku „{style}“ (povoleno: foto, logo, dokument)')
 
 
-def article(a, pre):
+def article(a, pre, kind):
     link = ''
     if a.get('odkaz'):
         url = a['odkaz']['url']
@@ -100,7 +101,7 @@ def article(a, pre):
             url = (pre + url[1:]) or './'
         ext = ' target="_blank" rel="noopener"' if url.startswith('http') else ''
         link = f' <a href="{html.escape(url)}"{ext} style="font-weight: 700;">{html.escape(a["odkaz"]["text"], quote=False)}</a>'
-    return f'''        <article style="background: rgb(255, 255, 255); display: grid; grid-template-columns: 110px 1fr; gap: 0px; align-items: stretch;" class="r14">
+    return f'''        <article class="news-item{' news-item--archiv' if kind == 'archiv' else ''}">
           {thumb(a.get("obrazek") or FALLBACK_IMAGE, pre)}
           <div style="padding: 16px 18px;">
             <div style="display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px;">
@@ -127,7 +128,7 @@ def main():
         if i < 0 or j < 0:
             sys.exit(f'V {rel} chybí značky {START} / {END}')
         chosen = items[:data.get('na_uvodni_strance', 3)] if kind == 'uvod' else items
-        block = START + '\n' + '\n'.join(article(a, pre) for a in chosen) + '\n        ' + END
+        block = START + '\n' + '\n'.join(article(a, pre, kind) for a in chosen) + '\n        ' + END
         s = s[:i] + block + s[j + len(END):]
         open(path, 'w', encoding='utf-8').write(s)
         print(f'{rel}: {len(chosen)} aktualit')

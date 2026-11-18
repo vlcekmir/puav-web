@@ -261,6 +261,16 @@ html { scroll-behavior: smooth; }
 .hv-invert:hover { background: rgb(17, 17, 17) !important; color: rgb(255, 255, 255) !important; }
 .hv-bg-yellow:hover { background: rgb(251, 170, 26) !important; }
 
+/* ---------- Aktuality (generuje nastroje/aktuality.py) ---------- */
+/* Náhled 3 : 2 vedle textu; v archivu širší; na mobilu fotka přes celou šířku nad textem (16 : 9). */
+.news-item { background: #ffffff; display: grid; grid-template-columns: 180px 1fr; align-items: start; }
+.news-item--archiv { grid-template-columns: 260px 1fr; }
+.news-thumb { aspect-ratio: 3 / 2; margin: 18px 0 18px 18px; }
+@media (max-width: 640px) {
+  .news-item, .news-item--archiv { grid-template-columns: 1fr; }
+  .news-thumb { aspect-ratio: 16 / 9; margin: 0; }
+}
+
 /* ---------- Kontaktní formulář (dialog) ---------- */
 .contact-dialog { border: none; padding: 34px 32px; width: calc(100% - 40px); max-width: 540px; max-height: 90vh; overflow-y: auto; background: #ffffff; color: #111111; margin: auto; }
 .contact-dialog::backdrop { background: rgba(0, 0, 0, 0.6); }
