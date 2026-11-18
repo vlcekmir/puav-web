@@ -1,0 +1,52 @@
+{
+  "_navod": "Aktuality webu. Po úpravě spusťte: python3 nastroje/aktuality.py (doplní je na úvodní stránku a do archivu na O Platformě). Pořadí se řídí polem „datum“ (RRRR-MM-DD), nejnovější první.",
+  "na_uvodni_strance": 3,
+  "aktuality": [
+    {
+      "datum": "2026-09-23",
+      "datum_text": "23.–28. září 2026",
+      "stitek": "Pozvánka",
+      "nadpis": "Serial Killer 2026 a industry program TV Days",
+      "text": "Devátý ročník mezinárodního festivalu seriálů v Brně nabídne premiéry evropské tvorby i odborné panely TV Days. Právě na tomto festivalu bylo v roce 2024 podepsáno Memorandum o vzniku PUAV.",
+      "odkaz": {
+        "text": "serialkiller.tv ↗",
+        "url": "https://serialkiller.tv/"
+      },
+      "obrazek": {
+        "soubor": "aktualita-serial-killer.jpg",
+        "popis": "Panelová diskuse o udržitelném využívání elektřiny na Serial Killer TV Days",
+        "styl": "foto",
+        "pozice": "48% 40%"
+      }
+    },
+    {
+      "datum": "2026-06-15",
+      "datum_text": "15. června 2026",
+      "stitek": "Vzdělávání",
+      "nadpis": "FAMU otevírá kurzy udržitelnosti v audiovizi",
+      "text": "Bezplatné kurzy zaměřené na filmovou produkci, data a reporting i environmentální komunikaci. Účastníci získají mezinárodně uznávaný mikrocertifikát.",
+      "odkaz": {
+        "text": "Více ↗",
+        "url": "https://www.famu.cz/cs/fakulta/environmentalni-agenda/udrzitelnost-v-audiovizi-nove-kurzy-czv-s-mikrocertifikaty/"
+      },
+      "obrazek": {
+        "soubor": "aktualita-famu.png",
+        "popis": "FAMU",
+        "styl": "logo",
+        "pozadi": "rgb(225, 34, 49)"
+      }
+    },
+    {
+      "datum": "2026-03-20",
+      "datum_text": "20. března 2026",
+      "stitek": "Principy",
+      "nadpis": "Jednotný reporting Principů zaveden napříč členy",
+      "text": "Televizní i nezávislé produkce nyní vykazují plnění Principů podle jedné metodiky a společné struktury závěrečné zprávy.",
+      "obrazek": {
+        "soubor": "aktualita-principy-obalka.jpg",
+        "popis": "Titulní strana Principů udržitelného natáčení",
+        "styl": "dokument"
+      }
+    }
+  ]
+}

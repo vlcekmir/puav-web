@@ -19,6 +19,8 @@ docs/                               ← samotný web (to se publikuje)
   assets/css/puav.css               písmo, efekty po najetí myší, mobilní úpravy
   assets/js/puav.js                 filtr Principů, rozbalovací komentář, kontaktní formulář
   sitemap.xml, robots.txt           pro vyhledávače
+obsah/aktuality.json                aktuality (zdroj pro „Co je nového“ a „Co se událo“)
+nastroje/aktuality.py               vloží aktuality do stránek
 nastroje/prevod-z-claude-design/    jednorázové skripty, kterými se web převedl z exportu Claude Design
 ```
 
@@ -35,6 +37,34 @@ Obsah se upravuje přímo v souborech ve složce `docs/`. Jsou dvě cesty:
 2. **Ručně na GitHubu:** otevřete soubor, klikněte na ikonu tužky, upravte a uložte (Commit changes).
 
 Každá změna se ukládá jako verze. Cokoli jde vrátit zpět.
+
+### Aktuality
+
+Aktuality se píšou jen jednou, do `obsah/aktuality.json`. Skript je pak vloží na dvě místa:
+- **úvodní stránka**, „Co je nového“: 3 nejnovější (počet určuje `na_uvodni_strance`);
+- **O Platformě**, „Co se událo“: všechny, od nejnovější.
+
+Po úpravě souboru je potřeba spustit `python3 nastroje/aktuality.py` (stačí Python 3). S Claude to proběhne automaticky.
+Obsah mezi značkami `<!-- AKTUALITY:START -->` a `<!-- AKTUALITY:END -->` v HTML se při spuštění přepíše, needitujte ho ručně.
+
+Jedna aktualita:
+
+```json
+{
+  "datum": "2026-06-15",
+  "datum_text": "15. června 2026",
+  "stitek": "Vzdělávání",
+  "nadpis": "FAMU otevírá kurzy udržitelnosti v audiovizi",
+  "text": "Bezplatné kurzy zaměřené na …",
+  "odkaz": { "text": "Více ↗", "url": "https://…" },
+  "obrazek": { "soubor": "aktualita-famu.png", "popis": "FAMU", "styl": "logo", "pozadi": "rgb(225, 34, 49)" }
+}
+```
+
+- `datum` (RRRR-MM-DD) určuje pořadí; `datum_text` je to, co se zobrazí (může být i rozsah „23.–28. září 2026“).
+- `odkaz` je nepovinný. Odkaz v rámci webu se píše od lomítka, např. `/jak-natacet-udrzitelne/#principy`.
+- `obrazek` je nepovinný (bez něj se ukáže logo PUAV). Soubor patří do `docs/assets/img/`. Styly:
+  `foto` (vyplní celý čtverec; `pozice` = výřez, např. `"50% 40%"`), `logo` (na barevném pozadí `pozadi`), `dokument` (náhled stránky se stínem).
 
 **Pravidla, aby web zůstal v pořádku:**
 - Nové obrázky zmenšete na nejvýš dvojnásobek velikosti, ve které se zobrazují (fotky do ~300 kB, JPEG).
