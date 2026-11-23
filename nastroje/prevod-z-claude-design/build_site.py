@@ -18,7 +18,7 @@ ROOT = sys.argv[1]  # scratchpad dir
 EX = os.path.join(ROOT, 'extract')
 BU = os.path.join(ROOT, 'build')
 OUT = os.path.join(ROOT, 'site')
-BASE_URL = 'https://puav.cz/'
+BASE_URL = 'https://www.puav.cz/'
 
 PAGES = [
     # key, slug, original file name in the bundle, title, description

@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://puav.cz/sitemap.xml
+Sitemap: https://www.puav.cz/sitemap.xml

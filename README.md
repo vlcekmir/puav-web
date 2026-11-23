@@ -99,10 +99,10 @@ Aby doména puav.cz ukazovala na web, je potřeba v DNS:
 5. Doporučeno: ověřit doménu v nastavení GitHub účtu (*Settings → Pages → Add a domain*). GitHub k tomu vygeneruje jeden TXT záznam.
    Ověření chrání doménu proti zneužití.
 
-Pak se v *Settings → Pages* zadá vlastní doména `puav.cz` a zapne *Enforce HTTPS*. Certifikát vydá GitHub automaticky.
+Pak se v *Settings → Pages* zadá vlastní doména `www.puav.cz` (hlavní adresa webu; puav.cz na ni přesměrovává) a zapne *Enforce HTTPS*. Certifikát vydá GitHub automaticky.
 Dokumentace: [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
 
-**greenfilming.cz** (spravuje TV Nova): ideálně trvalé přesměrování (HTTP 301) na `https://puav.cz/`.
+**greenfilming.cz** (spravuje TV Nova): ideálně trvalé přesměrování (HTTP 301) na `https://www.puav.cz/`.
 
 ## Otevřené body v obsahu
 
